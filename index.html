@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge" />
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Images/Logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Homepage.css" />
+    <title>GameVerse - "Unleash Your Gaming Odyssey!"</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="navbar">
+        <img src="Images/Logo.png" alt="" />
+        <div class="logo"><a href="#Home">GameVerse</a></div>
+        <ul class="links">
+          <li><a href="#Home">Home</a></li>
+          <!-- <li><a href="#OurTeam">Our Team</a></li> -->
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
+        <a href="/Gamepage/Gamepage.html" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="#Home">Home</a></li>
+        <!-- <li><a href="#OurTeam">Our Team</a></li> -->
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="/Gamepage/Gamepage.html" class="action_btn">Get Started</a></li>
+      </div>
+
+      <!-- Hero -->
+      <main>
+        <selection id="hero">
+          <h1>"Unleash Your Gaming Odyssey!"</h1>
+          <p>
+            "GameVerse: Unleash Your Gaming Legend. Enter a limitless universe
+            of gaming mastery. With thousands of games, forge your epic path,
+            conquer challenges, and connect with fellow gamers. Level up your
+            gaming experience today!"
+            <br><br>
+            <a href="/Gamepage/Gamepage.html">
+              <button class="btn btn--light">
+                <span class="btn__inner">
+                  <span class="btn__slide"></span>
+                    <span class="btn__content">Get Started</span>
+                </span>
+              </button>
+            </a>
+          </p>
+        </selection>
+      </main>
+    </header>
+
+    <!-- Meet Our Team -->
+    <!-- <section class="team" id="OurTeam">
+      <div class="center">
+        <h1>Our Team</h1>
+      </div>
+
+      <div class="team-content">
+        <div class="box">
+          <img src="Images/Mayank.jpeg" />
+          <h3>Mayank</h3>
+          <h5>Founder & Developer</h5>
+        </div>
+
+        <div class="box">
+          <img src="Images/Saksham.jpg" />
+          <h3>Saksham</h3>
+          <h5>Founder & Developer</h5>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Feedback -->
+    <div id="feedback">
+      <div class="container">
+        <form
+          action="https://formsubmit.co/gvfeedbackhub@gmail.com"
+          method="POST"
+        >
+          <h1>Give your Feedback</h1>
+          <div class="id">
+            <input type="text" name="Name" placeholder="Full name" />
+            <i calss="far fa-user"></i>
+          </div>
+          <div class="id">
+            <input type="email" name="Email" placeholder="Email address" />
+            <i calss="far fa-envolope"></i>
+          </div>
+          <textarea
+            name="TextArea"
+            cols="15"
+            rows="5"
+            placeholder="Enter you opinions here"
+          ></textarea>
+          <button>Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>GameVerse</h3>
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+          <!-- <a href="#OurTeam">Our Team</a> -->
+          <a href="#feedback">Feedback</a>
+        </p>
+        <p class="footer-company-name">GameVerse © 2023</p>
+      </div>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Sonipat</span> Haryana, India</p>
+        </div>
+        <!-- <div>
+          <i class="fa fa-phone"></i>
+          <p>+1.555.555.5555</p>
+        </div> -->
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="mailto:support@company.com">gvfeedbackhub@gmail.com</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>Tagline</span>
+          "Unleash Your Gaming Odyssey!"
+        </p>
+        <div class="footer-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+      // Script for Dropdown Menu
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
